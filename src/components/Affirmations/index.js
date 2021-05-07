@@ -1,9 +1,11 @@
-import React,{ useEffect, useState } from 'react'
+import React,{ useEffect, useState, useContext} from 'react'
+
 import { CardColumns} from 'react-bootstrap'
 import AffirmationCard from './AffirmationCard'
+import { AffirmationsContext } from '../../App'
 
 function Affirmations(){
-    const [affirmationsList, setAffirmationsList]=useState(null)
+  const {affirmationsList, setAffirmationsList} = useContext(AffirmationsContext)
   useEffect(()=>{
       fetch('https://afirmap-api.web.app/affirmations')
       .then(response => response.json())
@@ -13,7 +15,10 @@ function Affirmations(){
 
     return (
     <CardColumns>
- {!affirmationsList ? <h2>Philosophizing....</h2> : affirmationsList.map(one=>{
+ {!affirmationsList 
+ ? <h2>Philosophizing....</h2> 
+ : affirmationsList.map(one=>{
+
  return <AffirmationCard key={affirmationsList.displayName} affirmation={one}/>
 
  })}
