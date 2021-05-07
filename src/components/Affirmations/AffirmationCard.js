@@ -7,7 +7,12 @@ function AffirmationCard({ affirmation }) {
       <div class="description">
         {affirmation.text}
         <footer className="cardFooter">
-          <div class="profile-img"></div>
+          <div class="profile-img">
+            <Image roundedCircle
+                src={affirmation.photoUrl}
+                alt={affirmation.displayName}
+              /></div>
+              
           <h5> {affirmation.displayName} </h5>
         </footer>
       </div>

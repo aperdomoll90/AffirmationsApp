@@ -10,7 +10,7 @@
 h1 {
   font-family: 'Lobster', cursive;
   color:#ffffff;
-  font-size: 2em;
+  font-size: 1.9em;
   font-weight: 1000;
   line-height: 1;
   margin: 10px;
@@ -123,21 +123,18 @@ main {
 
 
       .profile-img {
-        height: 72px;
-        width: 72px;
         border-radius: 50%;
-        background: url('https://images.unsplash.com/photo-1504933350103-e840ede978d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80');
-
-        background-size: cover;
-        background-position: center;
         position: absolute;
         bottom: -10px;
         right: -10px;
-
         
+      }
+      .profile-img>img{
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
         box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
       }
-
 
       h5 {
         font-family: 'Great Vibes', cursive;
