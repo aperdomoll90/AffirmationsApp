@@ -2,6 +2,7 @@ import React, { useState, createContext } from 'react'
 import './App.css'
 import Header from './components/Header/'
 import Affirmations from './components/Affirmations/'
+import Footer from './components/Footer'
 
 // import GridFlexPractice from './components/Practice'
 
@@ -28,10 +29,13 @@ function App() {
         </header>
 
         <main>
-          <section id="grid">
+          
             <Affirmations />
-          </section>
+          
         </main>
+        <footer>
+        <Footer/>
+        </footer>
 
         {/* <GridFlexPractice/> */}
       </section>

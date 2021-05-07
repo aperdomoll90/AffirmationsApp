@@ -14,7 +14,7 @@ function Affirmations(){
   },[])
 
     return (
-    <CardColumns>
+      <section id="grid">
  {!affirmationsList 
  ? <h2>Philosophizing....</h2> 
  : affirmationsList.map(one=>{
@@ -22,7 +22,7 @@ function Affirmations(){
  return <AffirmationCard key={affirmationsList.displayName} affirmation={one}/>
 
  })}
-    </CardColumns>
+    </section>
     
     )
 }

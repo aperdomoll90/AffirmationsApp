@@ -3,14 +3,16 @@ import firebase from 'firebase'
 import {UserAuthContext} from '../../App'
 import {Button} from 'react-bootstrap'
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyB3lSgLFW6Ljr8xa-X30oAY7EvkXyFrgLw',
-  authDomain: 'afirmap-fc6fa.firebaseapp.com',
-  projectId: 'afirmap-fc6fa',
-  storageBucket: 'afirmap-fc6fa.appspot.com',
-  messagingSenderId: '475290774969',
-  appId: '1:475290774969:web:5cea9f0d8edcd6d5785a68',
-})
+if(firebase.apps.length === 0) {
+  firebase.initializeApp({
+    apiKey: 'AIzaSyB3lSgLFW6Ljr8xa-X30oAY7EvkXyFrgLw',
+    authDomain: 'afirmap-fc6fa.firebaseapp.com',
+    projectId: 'afirmap-fc6fa',
+    storageBucket: 'afirmap-fc6fa.appspot.com',
+    messagingSenderId: '475290774969',
+    appId: '1:475290774969:web:5cea9f0d8edcd6d5785a68',
+  })
+}
 
 function LoginButton() {
   const {user, setUser} = useContext(UserAuthContext)
@@ -29,7 +31,12 @@ function LoginButton() {
         .catch((err) => alert(err))
     }
   }
-  return <Button className="navButton" variant="outline-success" onClick={() => clickHandler()}>Login</Button>
+  return (
+    <Button className="navButton" variant="outline-success"
+      onClick={() => clickHandler()}>
+        {user ? 'Logout' : 'Login'}
+    </Button>
+  )
 }
 
 export default LoginButton

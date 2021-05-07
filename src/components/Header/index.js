@@ -9,7 +9,7 @@ function Header() {
   const [showModal, setShowModal] = useState(false)
   return (
     <>
-    <section ></section>
+    <section >
       <navbar className="nav">
 
         <div class="box-content">
@@ -24,7 +24,8 @@ function Header() {
         </div>
       </navbar>
       <PostNew show={showModal} onHide={() => setShowModal(false)} />
-    </>
+      </section>
+ </>
   )
 }
 
