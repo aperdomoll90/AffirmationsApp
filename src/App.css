@@ -16,6 +16,7 @@ h1 {
   font-weight: 1000;
   line-height: 1;
   margin: 10px;
+  margin-left: 100px;
 }
 h3 {
   
@@ -54,6 +55,7 @@ header > section{
   max-height: 350px;
   background-color: #0f2249a1;
   align-items: center;
+  border-radius: 20px 8px 8px 20px;
   
 }
 #headGrid{
@@ -69,6 +71,7 @@ header > section{
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items:center ;
+  
 }
 .box-content{
   margin-right: 5px;
@@ -76,6 +79,7 @@ header > section{
   display: flex; 
   justify-content:flex-end;
   align-items:center ;
+  
 }
 .navButton{
 margin: 5px;
@@ -102,7 +106,7 @@ main {
     flex-direction: row;
     justify-content: space-around;
 
-    background:#ffffff57;
+    
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
     overflow-y: scroll;
     
@@ -156,7 +160,7 @@ main {
         display: flex;
         justify-content: space-between;
        
-        background: #0f2249c2;;
+        background: #0f2249a1;
         color: white;
         width: 100%;
         position: absolute;
