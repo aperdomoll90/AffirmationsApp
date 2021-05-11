@@ -1,11 +1,13 @@
-.App {
-  height: 100vh;
-  text-align: center;
+body{
   background-image: url('https://wallpaperaccess.com/full/519390.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #282c34;
-  font-family: 'Lobster', cursive;
+}
+
+.App {
+ text-align: center;
+font-family: 'Lobster', cursive;
 }
 h1 {
   font-family: 'Lobster', cursive;
@@ -48,10 +50,10 @@ header > section{
   margin: 20px 0 1px 0;
   width: 100vw;
   max-width: 710px;
-  height: 7vh;
+  height: 10vh;
   max-height: 350px;
   background-color: #0f2249a1;
-  
+  align-items: center;
   
 }
 #headGrid{
@@ -90,8 +92,8 @@ main {
   main > section{
     width: 100vw;
     max-width: 710px;
-    height: 100vh;
-    max-height: 630px;
+    height: 100%;
+    max-height: 620px;
     border-radius: 8px;
     
     
@@ -175,37 +177,11 @@ footer {
   margin-right: 5px;
 }
 footer > section{
-  margin: 20px 0 1px 0;
+  margin: 5px 0 10px 0;
   width: 100vw;
   max-width: 710px;
-  height: 7vh;
+  height: 8vh;
   max-height: 350px;
   text-align:left;
   
 }
-
-
-
-
-/* display: inline-grid;  for two blocks floating next to each-other*/
-/* grid-template-columns: repeat(3, 1fr); 
-This creates a function that devides the area in to
-  3 colum each of 1 fraction of it 
- if we use repeat(3, minmax(150px, 1fr))
-  it would keep our boxes at a min weight of 150px
-  and a max of 1fr so no matter how big the 
-  screen gets will always be 1/3 of the container
- /* grid-template-columns: 1fr 2fr 1fr;
-  This makes the first box and last use on fraction 
-  and the middle one use 2fr*/
-/* With the grid auto-rows we can create as many 1fr rows as needed
- ca use minmax(150px, 1fr) to set min size is 150px and max would be 1fr*/
-/* grid-template-rows: repeat(2, 1fr);
-    This would create 2 rows of 1 fraction each  */
-
-   
-  
-
-   
-  
-  
