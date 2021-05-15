@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import firebase from 'firebase'
-import {UserAuthContext} from '../../App'
-import {Button} from 'react-bootstrap'
+import { UserAuthContext } from '../../App'
+import { Button } from 'react-bootstrap'
 
-if(firebase.apps.length === 0) {
+if (firebase.apps.length === 0) {
   firebase.initializeApp({
     apiKey: 'AIzaSyB3lSgLFW6Ljr8xa-X30oAY7EvkXyFrgLw',
     authDomain: 'afirmap-fc6fa.firebaseapp.com',
@@ -15,7 +15,7 @@ if(firebase.apps.length === 0) {
 }
 
 function LoginButton() {
-  const {user, setUser} = useContext(UserAuthContext)
+  const { user, setUser } = useContext(UserAuthContext)
   // use the higher order component by importing it and destructing it
   //import {UserAuthContext} from '../../App'
   // const [user, setUser]=useState(null)
@@ -32,9 +32,12 @@ function LoginButton() {
     }
   }
   return (
-    <Button className="navButton" variant="outline-success"
-      onClick={() => clickHandler()}>
-        {user ? 'Logout' : 'Login'}
+    <Button
+      className="navButton"
+      variant="outline-success"
+      onClick={() => clickHandler()}
+    >
+      {user ? 'Logout' : 'Login'}
     </Button>
   )
 }

@@ -1,6 +1,4 @@
-import React,{ useEffect, useState, useContext} from 'react'
-
-import { CardColumns} from 'react-bootstrap'
+import React,{ useEffect, useContext} from 'react'
 import AffirmationCard from './AffirmationCard'
 import { AffirmationsContext } from '../../App'
 
@@ -14,7 +12,7 @@ function Affirmations(){
   },[])
 
     return (
-      <section id="grid">
+      <section >
  {!affirmationsList 
  ? <h2>Philosophizing....</h2> 
  : affirmationsList.map(one=>{

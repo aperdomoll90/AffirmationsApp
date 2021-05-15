@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react'
-// import { ModalBody } from 'react-bootstrap'
 import Modal from 'react-bootstrap/Modal'
 import { UserAuthContext, AffirmationsContext } from '../../App'
 
 function PostNew(props) {
   const [newText, setNewText] = useState('')
   const { user } = useContext(UserAuthContext)
-  const {setAffirmationsList} = useContext(AffirmationsContext)
+  const { setAffirmationsList } = useContext(AffirmationsContext)
 
   const handleSubmit = () => {
     const newAffirmation = {
@@ -32,16 +31,17 @@ function PostNew(props) {
   }
 
   return (
-    <Modal {...props} size="lg" centered>
-      <Modal.Header closeButton></Modal.Header>
-      <Modal.Title>Post an Affirmation</Modal.Title>
+    <Modal {...props} centered>
+      <Modal.Header closeButton>
+        <Modal.Title>Post an Affirmation</Modal.Title>
+      </Modal.Header>
       <Modal.Body>
         <textarea
           value={newText}
           onChange={(e) => setNewText(e.target.value)}
-          rows="6"
-          cols="90"
-          placeholder="Inspire    Soothe     Heal"
+          rows="5"
+          cols="55"
+          placeholder="Your affirmation here..."
         ></textarea>
       </Modal.Body>
       <Modal.Footer>
